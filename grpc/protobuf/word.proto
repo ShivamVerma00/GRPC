@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "grpc/protobuf";
+
+package proto;
+
+service Word {
+  rpc Word_Count(Request) returns (Response);
+}
+
+message Request {
+  string Text = 1;
+}
+
+message Response {
+  repeated Word_Count Word_Count_ = 1;
+}
+
+message Word_Count {
+  string Word = 1;
+  uint64 Count = 2;
+}
