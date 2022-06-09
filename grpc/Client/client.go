@@ -44,7 +44,7 @@ func main() {
 		log.Fatal("Error: \n", err)
 	}
 
-	//log.Println("WordCount:")
+	
 	for index, value := range response.Word_Count_ {
 		log.Printf("Word: %s \t	Count: %d", value.Word, value.Count)
 		if index == 9 {
